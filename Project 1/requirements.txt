@@ -1,0 +1,14 @@
+实验环境：
+本次实验基于Python的环境进行。
+
+实验所需要安装的模块：
+numpy
+time
+gensim
+nltk
+sklearn
+tensorflow
+keras
+
+如果您需要复现本人的代码，则需要具备上述的实验环境与模块。
+另外，请确保我们附上的.npy文件与.txt文件与.ipynb文件处于同一个文件夹下。
