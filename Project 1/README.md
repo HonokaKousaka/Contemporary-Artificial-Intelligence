@@ -1,6 +1,8 @@
 # Project 1: Text Classification
 This is a text classification task. We need to classify thousands of texts into 10 categories.
 
+The data for training is in the file **train_data.txt**, and the data for prediction is in the file **test.txt**.
+
 &nbsp;
 
 ## Requirements
