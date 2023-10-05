@@ -23,6 +23,8 @@ Python is compulsory for the codes. DataSpell, PyCharm or VSCode is highly recom
 - tensorflow
 - keras
 
+Make sure that all the .ipynb, .npy, .txt files are in the same directory, otherwise it is likely that you can't run the codes successfully.
+
 &nbsp;
 
 ## Work
@@ -70,6 +72,7 @@ The results are shown in the file **results.txt**.
 - textVectorList.npy: A numpy list which stores the vector-converted training data. Should be loaded by **numpy**.
 - rawList.npy: A numpy list which stores the training texts. Should be loaded by **numpy**.
 - result_list.npy: A numpy list which stores the vector-converted test data. Should be loaded by **numpy**.
+- result_text.npy: A numpy list which stores the test texts. Should be loaded by **numpy**.
 - TFIDF_DecisionTree.ipynb: Decision Tree as the classifier, TF-IDF as the converter. Should start by **Jupyter Notebook**.
 - TFIDF_Logistic.ipynb: Logistic Regression as the classifier, TF-IDF as the converter. Should start by **Jupyter Notebook**.
 - TFIDF_MLP_sklearn.ipynb: Multilayer Perceptron as the classifier, TF-IDF as the converter. Should start by **Jupyter Notebook**.
