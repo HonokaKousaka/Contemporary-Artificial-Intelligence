@@ -28,6 +28,7 @@ int main()
 //    }
     int solution = Astar(start, target);
     cout<<solution<<endl;
-    
+
+    system("pause");
     return 0;
 }

@@ -13,6 +13,9 @@ struct path {
     int cost;
 };
 
+// fn stands for the sum of gn and hn,
+// while gn stands for the real cost,
+// hn stands for the heuristic
 struct Node
 {
     int fn;
@@ -21,6 +24,7 @@ struct Node
     int start_point;
 };
 
+// Define how the priority queue is sorted
 struct CompareNode
 {
     bool operator()(const Node* lhs, const Node* rhs) const {

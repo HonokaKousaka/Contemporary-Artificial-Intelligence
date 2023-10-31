@@ -1,8 +1,10 @@
 #include "Function.h"
 
+// Astar algorithm
 vector<int> astar(map<int, vector<path>>& graph, int start, int end) {
     vector<int> result;
     priority_queue<Node *, std::vector<Node *>, CompareNode> pq;
+    // The shortest path to the next is the heuristic
     int first_fn = 256;
     for (auto &i: graph[0])
     {
@@ -20,6 +22,7 @@ vector<int> astar(map<int, vector<path>>& graph, int start, int end) {
         int gn_cur = currentNode->gn;
         int hn_cur = currentNode->hn;
         int room_cur = currentNode->start_point;
+        // The shortest path to the next is the heuristic
         int heuristic = 256;
         for (auto &i: graph[room_cur])
         {
