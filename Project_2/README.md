@@ -11,7 +11,7 @@ If you are willing to run the codes, you have to make preparations as follows.
 
 C++ is compulsory for the codes. 
 
-Although other IDE and text editors are acceptable, CLion is strongly recommended when running the codes. The codes consist of some .cpp files and .h files, so it is necessary to link these files. CLion is quite useful when using the linker, and the executable files are created by CLion.
+Although other IDE and text editors are acceptable, **CLion** is strongly recommended when running the codes. The codes consist of some .cpp files and .h files, so it is necessary to link these files. CLion is quite useful when using the linker, and the executable files are created by CLion.
 
 &nbsp;
 
