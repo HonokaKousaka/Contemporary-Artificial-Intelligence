@@ -3,6 +3,7 @@
 
 int main()
 {
+
     cout << "Please input:" <<endl;
     // Input the first line
     int room_num, path_num, path_go;
@@ -22,7 +23,7 @@ int main()
             paths.push_back(connection);
     }
     vector<int> result = findResult(room_num, path_num, paths);
-    sort(result.begin(), result.end());
+    // sort(result.begin(), result.end());
     int diff = path_go - int(result.size());
     cout << "---------------------" << endl;
     // In order to print as the problem asks
@@ -45,9 +46,10 @@ int main()
 //        else
 //            cout << -1;
 //    }
-    for (int i : result)
+    for (int i = 0; i < result.size(); i++)
     {
-        cout << i << endl;
+        if (i < path_go)
+        cout << result[i] << endl;
     }
     for (int i = 0; i < diff; i++)
     {
