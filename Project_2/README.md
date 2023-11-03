@@ -46,6 +46,7 @@ Each time a $sub$ is added into OpenList, calculate $f(sub)=g'(sub)+h(sub)$. Rep
 ## Results
 
 A* algorithm is a path search algorithm, which can make sure the shortest paths will be found and reduce the time spent on finding the shortest paths. However, a good heuristic function is needed, which is not simple. We need to consider more when we are looking for a heuristic function.
+
 &nbsp;
 
 ## Files
