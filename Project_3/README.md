@@ -11,6 +11,8 @@ There are some indispensable environment and packages for this project. If you a
 
 Python is compulsory for the codes. DataSpell, PyCharm or VSCode is highly recommended.
 
+The codes were originally run on CoLaboratory with the help of T4 GPU.
+
 ### Packages
 
 - argparse
