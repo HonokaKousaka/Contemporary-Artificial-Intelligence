@@ -4,3 +4,4 @@ Projects for Contemporary Artificial Intelligence.
 
 ### Project 2: A* Algorithm
 
+### Project 3: Image Classfication and Classical Convolutional Neural Networks
