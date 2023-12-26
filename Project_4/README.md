@@ -73,4 +73,4 @@ Train the large models and run a test. The measurement **Rouge, BLEU, METEOR** w
 - predictions1(, 2, 3, 4, 5).csv: The prediction file of T5's 5-fold cross-validation.
 - predictions.csv: The prediction of test.csv when using T5.
 - predictions_bart: The prediction of test.csv when using BART.
--  
+- 10215501434李睿恩实验四.pdf: The report for Assignment 4.
