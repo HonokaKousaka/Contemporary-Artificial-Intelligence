@@ -19,6 +19,8 @@ The URL of AutoDL is https://www.autodl.com/home.
 
 ### Packages
 
+There are some necessary packages you are supposed to install.
+
 - numpy
 - pandas
 - rouge
@@ -32,25 +34,13 @@ It is strongly recommended to install the packages in **requirements.txt**.
 
 There are 2 ways to run the codes.
 
-1. Run the .ipynb files directly.
+1. Try running .py files. You can use certain commands to run the codes. Examples are as follows.
 
-2. If running .ipynb file is not convenient for you, you can try running .py files. The package **argparse** is used in .py file; therefore, you have to use certain commands to run the codes. Examples are as follows.
+`python BART.py`
 
-`python LeNet.py --lr 0.001 --dropout 0.0`
+`python T5.py`
 
-`python AlexNet.py --lr 0.001 --dropout 0.5`
-
-`python ResNet.py --lr 0.001 --dropout 0.0`
-
-`python VGGNet.py --lr 0.001 --dropout 0.0`
-
-`python GoogLeNet.py --lr 0.001 --dropout 0.4`
-
-`python Inceptionv2.py --lr 0.001 --dropout 0.4`
-
-In these commands, --lr means learning rate, while --dropout menas the dropout rate.
-
-Although these are only examples, we **strongly recommend you to run these 6 .py files with these parameters**. It is proved that these parameters are useful enough.
+2. If you can not run the .py files successfully, you can try run the .ipynb files.
 
 &nbsp;
 
@@ -58,32 +48,29 @@ Although these are only examples, we **strongly recommend you to run these 6 .py
 
 ### Step 1: 
 
-Convert the image data and label data into an approriate shape.
+Use the package **Transformers** from **HuggingFace**, specifically T5 and BART.
 
 ### Step 2: 
 
-Construct diverse convolutional neural networks.
+Customize the data. 
 
-In this assignment, LeNet, AlexNet, ResNet, VGGNet, GoogLeNet, InceptionV2 are constructed.
+Data should be in a certain kind of format.
 
 ### Step 3:
 
-Train the neural networks and run a test. The time spent and the accuracy will be collected.
+Train the large models and run a test. The measurement **Rouge, BLEU, METEOR** will be collected.
 
 &nbsp;
 
 ## Files
 
-- LeNet.ipynb: The .ipynb file for LeNet.
-- AlexNet.ipynb: The .ipynb file for AlexNet.
-- ResNet.ipynb: The .ipynb file for ResNet.
-- VGGNet.ipynb: The .ipynb file for VGGNet.
-- GoogLeNet.ipynb: The .ipynb file for GoogLeNet.
-- Inceptionv2.ipynb: The .ipynb file for Inceptionv2.
-- LeNet.py: The .py file for LeNet.
-- AlexNet.py: The .py file for AlexNet.
-- ResNet.py: The .py file for ResNet.
-- VGGNet.py: The .py file for VGGNet.
-- GoogLeNet.py: The .py file for GoogLeNet.
-- Inceptionv2.py: The .py file for Inceptionv2.
-- 10215501434李睿恩实验三: The report for Assignment 3.
+- T5.ipynb: The .ipynb file for T5 large model.
+- BART.ipynb: The .ipynb file for BART large model.
+- T5.py: The .py file for T5 large model.
+- BART.py: The .py file for BART large model.
+- train.csv: The training dataset for this task.
+- test.csv: The test dataset for this task.
+- predictions1(, 2, 3, 4, 5).csv: The prediction file of T5's 5-fold cross-validation.
+- predictions.csv: The prediction of test.csv when using T5.
+- predictions_bart: The prediction of test.csv when using BART.
+-  
