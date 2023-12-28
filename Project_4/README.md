@@ -42,6 +42,8 @@ There are 2 ways to run the codes.
 
 2. If you can not run the .py files successfully, you can try run the .ipynb files.
 
+Remember put all the files in a same directory when running the codes.
+
 &nbsp;
 
 ## Work
