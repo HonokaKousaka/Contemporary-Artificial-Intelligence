@@ -88,6 +88,7 @@ def train_model(model, epoch_num, optimizer, train_dataloader, valid_dataloader,
                                                                                                            loss.item(),
                                                                                                            train_cor_count / train_count,
                                                                                                            valid_cor_count / valid_count))
+    # 绘制准确率的图像
     plt.plot(train_acc, label="Train Accuracy")
     plt.plot(valid_acc, label="Valid Accuracy")
     plt.title(model.__class__.__name__)
