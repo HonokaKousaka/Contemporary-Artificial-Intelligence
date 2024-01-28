@@ -49,7 +49,10 @@ We select some important files for detailed description.
 |-- BERT_ALEXNET.ipynb # BERT + AlexNet
 |-- BERT_RESNET.ipynb # BERT + ResNet
 |-- BERT_VGGNET.ipynb # BERT + VGGNet
+|-- BERT.ipynb # BERT
+|-- RESNET.ipynb # RESNET
 |-- main.py # The main code
+|-- README.md # Important note
 |-- requirements.txt # The environment for the codes
 |-- test_without_label.txt # The data for testing
 |-- train.py # The code for training
