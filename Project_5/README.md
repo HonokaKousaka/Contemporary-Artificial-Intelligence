@@ -70,28 +70,32 @@ Please add the directory 'data' to this project as I have claimed above in **Rep
 
 You have basically two ways to run the codes.
 
-1. 
+1. Try running **main.py**. You can use certain commands to run the codes. Examples are as follows.
+
+`python main.py --model bertAlexModel --lr 1e-5 --epoch_num 10`
+
+`python main.py --model bertResModel --lr 1e-5 --epoch_num 10`
+
+`python main.py --model bertVGGModel --lr 1e-5 --epoch_num 10`
+
+`python main.py --image --lr 1e-5 --epoch_num 10`
+
+`python main.py --text --lr 1e-5 --epoch_num 10`
+
+If you use `--model`, then you can follow it with `bertAlexModel`, `bertResModel` or `bertVGGModel`. These are the three models combined BERT with CNN.
+
+If you use `--image`, then you are only using the model ResNet34. 
+
+If you use `--text`, then you are only using the model BERT.
+
+Although `--lr` can change the learning rate and `--epoch_num` can change the number of epoches, it is strongly recommended to follow the commands given above, as they are the most effective parameters through tests.
 
 ## Attribution
 
 Parts of this code are based on the following repositories:
 
-- [LINKX](https://github.com/CUAI/Non-Homophily-Large-Scale)
+- [abhimishra91](https://github.com/abhimishra91/transformers-tutorials)
 
-- [PYGCN](https://github.com/tkipf/pygcn)
+- [guitld](https://github.com/guitld/Transfer-Learning-with-Joint-Fine-Tuning-for-Multimodal-Sentiment-Analysis/tree/main)
 
-- [WRGAT](https://github.com/susheels/gnns-and-local-assortativity/tree/main/struc_sim)
-
-
-## Citation
-
-If you find this code working for you, please cite:
-
-```python
-@article{li2022finding,
-  title={Finding Global Homophily in Graph Neural Networks When Meeting Heterophily},
-  author={Li, Xiang and Zhu, Renyu and Cheng, Yao and Shan, Caihua and Luo, Siqiang and Li, Dongsheng and Qian, Weining},
-  journal={arXiv preprint arXiv:2205.07308},
-  year={2022}
-}
-```
+- [Miaheeee](https://github.com/Miaheeee/AI_lab5)
