@@ -18,27 +18,29 @@ class bertResModel(nn.Module):
     def __init__(self):
         super().__init__()
         # 使用Bert与ResNet34的预训练模型
-        self.txt_model = BertModel.from_pretrained('bert-base-uncased')
-        self.img_model = torchvision.models.resnet34(pretrained=True)
+        self.textual_model = BertModel.from_pretrained('bert-base-uncased')
+        self.visual_model = torchvision.models.resnet34(pretrained=True)
         # 事先定义神经网络层
-        self.t_linear = nn.Linear(768, 128)     # 文本的线性层
-        self.i_linear = nn.Linear(1000, 128)    # 图片的线性层
-        self.img_w = nn.Linear(128, 1)          # 为图片计算权重
-        self.txt_w = nn.Linear(128, 1)          # 为文本计算权重
-        self.result = nn.Linear(128, 3)         # 三分类全连接层
-        self.relu = nn.ReLU()                   # 非线性激活层
+        self.textual_linear = nn.Linear(768, 128)   # 文本的线性层
+        self.visual_linear = nn.Linear(1000, 128)   # 图片的线性层
+        self.image_weight = nn.Linear(128, 1)       # 为图片计算权重
+        self.text_weight = nn.Linear(128, 1)        # 为文本计算权重
+        self.result = nn.Linear(128, 3)             # 三分类全连接层
+        self.relu = nn.ReLU()                       # 非线性激活层
 
     def forward(self, input_ids, attention_mask, image):
-        img_out = self.img_model(image)
-        img_out = self.i_linear(img_out)
-        img_out = self.relu(img_out)
-        img_weight = self.img_w(img_out)
-        txt_out = self.txt_model(input_ids=input_ids, attention_mask=attention_mask)
-        txt_out = txt_out.last_hidden_state[:, 0, :]
-        txt_out.view(txt_out.shape[0], -1)
-        txt_out = self.t_linear(txt_out)
-        txt_out = self.relu(txt_out)
-        txt_weight = self.txt_w(txt_out)
-        last_out = img_weight * img_out + txt_weight * txt_out
-        last_out = self.result(last_out)
-        return last_out
+        visual_output = self.visual_model(image)
+        visual_output = self.visual_linear(visual_output)
+        visual_output = self.relu(visual_output)
+        image_weight = self.image_weight(visual_output)
+
+        textual_output = self.textual_model(input_ids=input_ids, attention_mask=attention_mask)
+        textual_output = textual_output.last_hidden_state[:, 0, :]
+        textual_output.view(textual_output.shape[0], -1)
+        textual_output = self.textual_linear(textual_output)
+        textual_output = self.relu(textual_output)
+        text_weight = self.text_weight(textual_output)
+
+        final_output = image_weight * visual_output + text_weight * textual_output
+        final_output = self.result(final_output)
+        return final_output
