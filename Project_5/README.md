@@ -90,6 +90,8 @@ If you use `--text`, then you are only using the model BERT.
 
 Although `--lr` can change the learning rate and `--epoch_num` can change the number of epoches, it is strongly recommended to follow the commands given above, as they are the most effective parameters through tests.
 
+2. Try running those .ipynb files. You can run BERT_ALEXNET.ipynb, BERT_RESNET.ipynb, BERT_VGGNET.ipynb, BERT.ipynb, RESNET.ipynb.
+
 ## Attribution
 
 Parts of this code are based on the following repositories:
